@@ -16,3 +16,7 @@ Scripts to be used on pandas dfs.
 
 #### misc_test
 Basic scripts to test package making capabilities.
+
+# IN development
+Make install script delete __pycache__ from each subfolder before copying \n
+Complete linear regression tool for df_tools \n
