@@ -1,18 +1,18 @@
 # bradlib
 Project contains scripts which are of use across projects.
 
-### INSTALL
-1) open cmd in current dir
+# INSTALL
+1) open cmd in git dir
 2) run either:
-jupyter nbconvert --execute make_avail.ipynb
+jupyter nbconvert --execute install.ipynb
 OR
-ipython make_avail.py
+ipython install.py
 
 
 
-####### Folders:
+# Folders:
 #### dftools
-Scripts to be used on padnas dfs.
+Scripts to be used on pandas dfs.
 
 #### misc_test
 Basic scripts to test package making capabilities.
