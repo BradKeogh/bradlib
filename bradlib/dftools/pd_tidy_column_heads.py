@@ -16,6 +16,9 @@ def pd_tidy_column_heads(dataframe):
         j = j.replace(')','')
         j = j.replace(':','')
         j = j.replace(';','')
+        j = j.replace('-','')
+        j = j.replace('/','')
+        #j = j.replace('\','')
         rename_cols[i] = j
 
     dataframe = dataframe.rename(columns=rename_cols)
