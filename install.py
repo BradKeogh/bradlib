@@ -3,29 +3,29 @@
 
 # # Script to copy files to Anaconda paths so can import and use scripts
 
-# In[1]:
+# In[69]:
 
 module_name = 'bradlib'
 
 
 # #### find main path for install
 
-# In[2]:
+# In[70]:
 
 from distutils.sysconfig import get_python_lib #; print(get_python_lib())
 
 
-# In[3]:
+# In[71]:
 
 path_main = get_python_lib()
 
 
-# In[4]:
+# In[72]:
 
 path_main
 
 
-# In[5]:
+# In[73]:
 
 path_main.split('Anaconda3')
 
@@ -37,17 +37,17 @@ path_main.split('Anaconda3')
 
 
 
-# In[6]:
+# In[74]:
 
 dest_paths_list = []
 
 
-# In[7]:
+# In[75]:
 
 dest_paths_list.append(path_main + '\\' + module_name)
 
 
-# In[8]:
+# In[76]:
 
 dest_paths_list
 
@@ -56,17 +56,17 @@ dest_paths_list
 
 # MAKE SURE HAS 'module name' AT END OF PATH!!
 
-# In[9]:
+# In[77]:
 
 x = get_ipython().getoutput('conda env list')
 
 
-# In[10]:
+# In[78]:
 
 #x[2:-2]
 
 
-# In[11]:
+# In[79]:
 
 print('------------------------------------------------')
 print('Conda envrionments found which will install to:')
@@ -78,19 +78,19 @@ for i in x[2:-2]:
     dest_paths_list.append(new_path)
 
 
-# In[12]:
+# In[80]:
 
-dest_paths_list
+#dest_paths_list
 
 
 # #### function to  copy files to list of paths 
 
-# In[13]:
+# In[81]:
 
 import os
 
 
-# In[14]:
+# In[82]:
 
 def copy_to_paths(source,dest):
     """
@@ -131,7 +131,7 @@ def copy_to_paths(source,dest):
     return
 
 
-# In[15]:
+# In[83]:
 
 source = ".\\" + module_name
 
@@ -143,11 +143,16 @@ source = ".\\" + module_name
 
 # #### Run code for each location
 
-# In[16]:
+# In[84]:
 
 for destination in dest_paths_list:
     print(destination)
     copy_to_paths(source, destination)
+
+
+# In[85]:
+
+print('INSTALL SUCCESSFUL')
 
 
 # In[ ]:
